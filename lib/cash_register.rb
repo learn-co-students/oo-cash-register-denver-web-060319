@@ -13,15 +13,6 @@ class CashRegister
        self.total += (price * quantity) 
        quantity.times { items << item }
        self.last_transaction = (price * quantity)
-        # if quantity  
-        #     @price = price * quantity
-        #     @total += (price * quantity) 
-        #     quantity.times { @items << item}
-        # else 
-        #     @price = price
-        #     @total += price
-        #     @items << item
-        # end
     end
 
     def apply_discount
@@ -35,7 +26,5 @@ class CashRegister
 
     def void_last_transaction
         self.total -= self.last_transaction
-        # @total -= @price 
     end
-    
 end
